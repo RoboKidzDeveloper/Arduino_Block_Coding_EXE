@@ -1,0 +1,26 @@
+2024-10-16 11:22:36,967 - INFO - Blocklyduino can now be accessed at http://127.0.0.1:8080/
+2024-10-16 11:22:38,293 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/
+2024-10-16 11:22:38,536 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/style.css
+2024-10-16 11:22:38,539 - INFO - Handling GET request for path: /blockly/blockly_compressed.js
+2024-10-16 11:22:38,551 - INFO - Handling GET request for path: /blockly/blocks_compressed.js
+2024-10-16 11:22:38,553 - INFO - Handling GET request for path: /blockly/arduino_compressed.js
+2024-10-16 11:22:38,555 - INFO - Handling GET request for path: /blockly/msg/js/en.js
+2024-10-16 11:22:38,557 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/Blob.js
+2024-10-16 11:22:38,559 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/spin.js
+2024-10-16 11:22:38,561 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/FileSaver.min.js
+2024-10-16 11:22:38,564 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/blockly_helper.js
+2024-10-16 11:22:38,573 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/main.js
+2024-10-16 11:22:38,580 - INFO - Handling GET request for path: /blockly/blocks/text.js
+2024-10-16 11:22:38,584 - INFO - Handling GET request for path: /blockly/custom/lcd_blocks.js
+2024-10-16 11:22:38,589 - INFO - Handling GET request for path: /blockly/custom/sensor_blocks.js
+2024-10-16 11:22:38,594 - INFO - Handling GET request for path: /blockly/custom/arduino_blocks.js
+2024-10-16 11:22:38,596 - INFO - Handling GET request for path: /blockly/custom/text_blocks.js
+2024-10-16 11:22:38,604 - INFO - Handling GET request for path: /blockly/custom/esp_blocks.js
+2024-10-16 11:22:38,608 - INFO - Handling GET request for path: /blockly/custom/DHT_blocks.js
+2024-10-16 11:22:38,611 - INFO - Handling GET request for path: /blockly/custom/connection.js
+2024-10-16 11:22:39,076 - INFO - Handling GET request for path: /blockly/custom/variablee.js
+2024-10-16 11:22:39,627 - INFO - Handling GET request for path: /get-boards
+2024-10-16 11:22:39,627 - INFO - Sending available boards list.
+2024-10-16 11:22:39,678 - INFO - Handling GET request for path: /favicon.ico
+2024-10-16 11:22:42,707 - INFO - Handling POST request for path: /upload
+2024-10-16 11:22:42,707 - ERROR - Invalid upload request: 'code' or 'fqbn' missing.

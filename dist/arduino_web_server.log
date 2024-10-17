@@ -1,0 +1,18 @@
+2024-10-16 17:07:46,609 - INFO - Blocklyduino can now be accessed at http://127.0.0.1:8080/
+2024-10-16 17:07:47,883 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/
+2024-10-16 17:07:47,914 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/style.css
+2024-10-16 17:07:47,914 - INFO - Handling GET request for path: /blockly/blockly_compressed.js
+2024-10-16 17:07:47,930 - INFO - Handling GET request for path: /blockly/arduino_compressed.js
+2024-10-16 17:07:47,930 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/Blob.js
+2024-10-16 17:07:47,945 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/spin.js
+2024-10-16 17:07:47,945 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/FileSaver.min.js
+2024-10-16 17:07:47,945 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/blockly_helper.js
+2024-10-16 17:07:47,958 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/main.js
+2024-10-16 17:07:47,977 - INFO - Handling GET request for path: /blockly/custom/lcd_blocks.js
+2024-10-16 17:07:47,977 - INFO - Handling GET request for path: /blockly/custom/esp_blocks.js
+2024-10-16 17:07:47,977 - INFO - Handling GET request for path: /blockly/custom/connection.js
+2024-10-16 17:07:48,432 - INFO - Handling GET request for path: /blockly/custom/variablee.js
+2024-10-16 17:07:48,810 - INFO - Handling GET request for path: /get-boards
+2024-10-16 17:07:48,810 - INFO - Sending available boards list.
+2024-10-16 17:07:48,904 - INFO - Handling GET request for path: /favicon.ico
+2024-10-16 17:08:06,978 - INFO - Handling GET request for path: /favicon.ico
