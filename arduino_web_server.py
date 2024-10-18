@@ -25,13 +25,19 @@ board_fqbn = ""  # FQBN (Fully Qualified Board Name) for the selected board
 def get_arduino_command():
     """Return the path to the Arduino CLI binary using a relative path."""
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    arduino_cli_path = os.path.join(script_dir, "resources", "Arduino CLI", "arduino-cli.exe")
+    arduino_cli_path = os.path.join(script_dir, "resources", "Arduino-CLI", "arduino-cli.exe")
+
+    # Add print to display the path
+    print("Arduino CLI Path:", arduino_cli_path)
+    
     if os.path.exists(arduino_cli_path):
         logging.info("Using Arduino CLI command at %s", arduino_cli_path)
         return arduino_cli_path
     else:
         logging.error("Arduino CLI command not found at specified path: %s", arduino_cli_path)
         return None
+
+
 
 def guess_port_name():
     """Attempt to guess a port name that we might find an Arduino on."""
@@ -200,7 +206,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         """Send JSON response with added CORS header for client access."""
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')  #Allows cross-origin requests
+        self.send_header('Access-Control-Allow-Origin', '*')  # Allows cross-origin requests
         self.end_headers()
         self.wfile.write(json.dumps(data).encode())
 

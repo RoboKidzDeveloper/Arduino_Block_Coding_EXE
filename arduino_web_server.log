@@ -1,26 +1,49 @@
-2024-10-16 11:22:36,967 - INFO - Blocklyduino can now be accessed at http://127.0.0.1:8080/
-2024-10-16 11:22:38,293 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/
-2024-10-16 11:22:38,536 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/style.css
-2024-10-16 11:22:38,539 - INFO - Handling GET request for path: /blockly/blockly_compressed.js
-2024-10-16 11:22:38,551 - INFO - Handling GET request for path: /blockly/blocks_compressed.js
-2024-10-16 11:22:38,553 - INFO - Handling GET request for path: /blockly/arduino_compressed.js
-2024-10-16 11:22:38,555 - INFO - Handling GET request for path: /blockly/msg/js/en.js
-2024-10-16 11:22:38,557 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/Blob.js
-2024-10-16 11:22:38,559 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/spin.js
-2024-10-16 11:22:38,561 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/FileSaver.min.js
-2024-10-16 11:22:38,564 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/blockly_helper.js
-2024-10-16 11:22:38,573 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/main.js
-2024-10-16 11:22:38,580 - INFO - Handling GET request for path: /blockly/blocks/text.js
-2024-10-16 11:22:38,584 - INFO - Handling GET request for path: /blockly/custom/lcd_blocks.js
-2024-10-16 11:22:38,589 - INFO - Handling GET request for path: /blockly/custom/sensor_blocks.js
-2024-10-16 11:22:38,594 - INFO - Handling GET request for path: /blockly/custom/arduino_blocks.js
-2024-10-16 11:22:38,596 - INFO - Handling GET request for path: /blockly/custom/text_blocks.js
-2024-10-16 11:22:38,604 - INFO - Handling GET request for path: /blockly/custom/esp_blocks.js
-2024-10-16 11:22:38,608 - INFO - Handling GET request for path: /blockly/custom/DHT_blocks.js
-2024-10-16 11:22:38,611 - INFO - Handling GET request for path: /blockly/custom/connection.js
-2024-10-16 11:22:39,076 - INFO - Handling GET request for path: /blockly/custom/variablee.js
-2024-10-16 11:22:39,627 - INFO - Handling GET request for path: /get-boards
-2024-10-16 11:22:39,627 - INFO - Sending available boards list.
-2024-10-16 11:22:39,678 - INFO - Handling GET request for path: /favicon.ico
-2024-10-16 11:22:42,707 - INFO - Handling POST request for path: /upload
-2024-10-16 11:22:42,707 - ERROR - Invalid upload request: 'code' or 'fqbn' missing.
+2024-10-18 12:16:27,148 - INFO - Blocklyduino can now be accessed at http://127.0.0.1:8080/
+2024-10-18 12:16:29,541 - INFO - Handling GET request for path: /get-boards
+2024-10-18 12:16:29,541 - INFO - Sending available boards list.
+2024-10-18 12:16:29,576 - INFO - Handling GET request for path: /favicon.ico
+2024-10-18 12:16:32,722 - INFO - Handling POST request for path: /upload
+2024-10-18 12:16:32,736 - INFO - Sketch uploaded and upload process started.
+2024-10-18 12:16:32,740 - INFO - Handling GET request for path: /upload-stream
+2024-10-18 12:16:32,790 - INFO - Guessing port name as COM4
+2024-10-18 12:16:32,790 - INFO - Using Arduino CLI command at P:\Block_Coding\Arduino_Block_Coding_EXE\resources\Arduino-CLI\arduino-cli.exe
+2024-10-18 12:16:33,111 - DEBUG - 
+2024-10-18 12:16:33,113 - DEBUG - Using board 'nano' from platform in folder: C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6
+2024-10-18 12:16:33,113 - DEBUG - Using core 'arduino' from platform in folder: C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6
+2024-10-18 12:16:33,113 - DEBUG - 
+2024-10-18 12:16:33,165 - DEBUG - Detecting libraries used...
+2024-10-18 12:16:33,232 - DEBUG - C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\variants\eightanaloginputs C:\Users\lapto\AppData\Local\Temp\arduino\sketches\2DDC3810379AB86AAC7A82DFAF069F02\sketch\tmpitugxrn2.ino.cpp -o nul
+2024-10-18 12:16:33,232 - DEBUG - Generating function prototypes...
+2024-10-18 12:16:33,282 - DEBUG - C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\variants\eightanaloginputs C:\Users\lapto\AppData\Local\Temp\arduino\sketches\2DDC3810379AB86AAC7A82DFAF069F02\sketch\tmpitugxrn2.ino.cpp -o C:\Users\lapto\AppData\Local\Temp\1382097687\sketch_merged.cpp
+2024-10-18 12:16:33,282 - DEBUG - C:\Users\lapto\AppData\Local\Arduino15\packages\builtin\tools\ctags\5.8-arduino11/ctags -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives C:\Users\lapto\AppData\Local\Temp\1382097687\sketch_merged.cpp
+2024-10-18 12:16:33,282 - DEBUG - Compiling sketch...
+2024-10-18 12:16:33,282 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR "-IC:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino" "-IC:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\eightanaloginputs" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02\\sketch\\tmpitugxrn2.ino.cpp" -o "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02\\sketch\\tmpitugxrn2.ino.cpp.o"
+2024-10-18 12:16:33,358 - DEBUG - Compiling libraries...
+2024-10-18 12:16:33,417 - DEBUG - Compiling core...
+2024-10-18 12:16:33,529 - DEBUG - Using precompiled core: C:\Users\lapto\AppData\Local\Temp\arduino\cores\arduino_avr_nano_cpu_atmega328old_7d525b5b9f1c428549801cac2158a35a\core.a
+2024-10-18 12:16:33,582 - DEBUG - Linking everything together...
+2024-10-18 12:16:33,588 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p -o "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02/tmpitugxrn2.ino.elf" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02\\sketch\\tmpitugxrn2.ino.cpp.o" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02/..\\..\\cores\\arduino_avr_nano_cpu_atmega328old_7d525b5b9f1c428549801cac2158a35a\\core.a" "-LC:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02" -lm
+2024-10-18 12:16:33,749 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0 "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02/tmpitugxrn2.ino.elf" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02/tmpitugxrn2.ino.eep"
+2024-10-18 12:16:33,800 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02/tmpitugxrn2.ino.elf" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02/tmpitugxrn2.ino.hex"
+2024-10-18 12:16:33,800 - DEBUG - 
+2024-10-18 12:16:33,899 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\2DDC3810379AB86AAC7A82DFAF069F02/tmpitugxrn2.ino.elf"
+2024-10-18 12:16:33,950 - DEBUG - Sketch uses 444 bytes (1%) of program storage space. Maximum is 30720 bytes.
+2024-10-18 12:16:33,950 - DEBUG - Global variables use 9 bytes (0%) of dynamic memory, leaving 2039 bytes for local variables. Maximum is 2048 bytes.
+2024-10-18 12:16:34,043 - DEBUG - "C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/bin/avrdude" "-CC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/etc/avrdude.conf" -v -V -patmega328p -carduino "-PCOM4" -b57600 -D "-Uflash:w:C:\Users\lapto\AppData\Local\Temp\arduino\sketches\2DDC3810379AB86AAC7A82DFAF069F02/tmpitugxrn2.ino.hex:i"
+2024-10-18 12:16:34,070 - DEBUG - 
+2024-10-18 12:16:34,070 - DEBUG - avrdude: Version 6.3-20190619
+2024-10-18 12:16:34,070 - DEBUG - Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
+2024-10-18 12:16:34,070 - DEBUG - Copyright (c) 2007-2014 Joerg Wunsch
+2024-10-18 12:16:34,071 - DEBUG - 
+2024-10-18 12:16:34,133 - DEBUG - System wide configuration file is "C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/etc/avrdude.conf"
+2024-10-18 12:16:34,133 - DEBUG - 
+2024-10-18 12:16:34,133 - DEBUG - Using Port                    : COM4
+2024-10-18 12:16:34,133 - DEBUG - Using Programmer              : arduino
+2024-10-18 12:16:34,133 - DEBUG - Overriding Baud Rate          : 57600
+2024-10-18 12:16:39,213 - DEBUG - avrdude: ser_open(): can't open device "\\.\COM4": The semaphore timeout period has expired.
+2024-10-18 12:16:39,213 - DEBUG - 
+2024-10-18 12:16:39,214 - DEBUG - 
+2024-10-18 12:16:39,214 - DEBUG - 
+2024-10-18 12:16:39,269 - DEBUG - avrdude done.  Thank you.
+2024-10-18 12:16:39,269 - DEBUG - 
+2024-10-18 12:16:39,321 - DEBUG - Error during Upload: Failed uploading: uploading error: exit status 1
