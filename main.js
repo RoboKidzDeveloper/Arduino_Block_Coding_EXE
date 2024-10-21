@@ -1,7 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const { exec } = require('child_process');
 const path = require('path');
-const http = require('http');  // Add this line to import the http module
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -10,12 +9,16 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
-            enableRemoteModule: true,
-            webSecurity: false,
+            enableRemoteModule: true,  // This enables remote module access for certain Electron versions
+            webSecurity: false,  // Disable for local development, secure for production later
         }
     });
 
+    // Load the local server into the Electron window
     win.loadURL('http://localhost:8080/blockly/apps/blocklyduino/index.html');
+
+    // Uncomment for debugging
+    // win.webContents.openDevTools();
 }
 
 // Start the Python server when Electron starts
@@ -36,46 +39,8 @@ function startPythonServer() {
 }
 
 app.whenReady().then(() => {
-    startPythonServer();
-    setTimeout(createWindow, 5000);
-});
-
-ipcMain.on('start-upload', (event, args) => {
-    const { sketchname, fqbn } = args;
-
-    const data = JSON.stringify({
-        code: sketchname,
-        fqbn: fqbn
-    });
-
-    const options = {
-        hostname: 'localhost',
-        port: 8080,
-        path: '/upload',
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Content-Length': data.length
-        }
-    };
-
-    const req = http.request(options, (res) => {
-        let output = '';
-        res.on('data', (chunk) => {
-            output += chunk;
-        });
-        res.on('end', () => {
-            event.sender.send('upload-progress', output);
-        });
-    });
-
-    req.on('error', (e) => {
-        console.error(`Problem with request: ${e.message}`);
-        event.sender.send('upload-progress', `Error: ${e.message}`);
-    });
-
-    req.write(data);
-    req.end();
+    startPythonServer();  // Start the Python server
+    setTimeout(createWindow, 5000);  // Wait 5 seconds to ensure the server starts before opening the window
 });
 
 app.on('window-all-closed', () => {
