@@ -1,51 +1,50 @@
-2024-10-18 12:20:30,262 - INFO - Blocklyduino can now be accessed at http://127.0.0.1:8080/
-2024-10-18 12:20:36,036 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/
-2024-10-18 12:20:36,076 - INFO - Handling GET request for path: /get-boards
-2024-10-18 12:20:36,076 - INFO - Sending available boards list.
-2024-10-18 12:20:36,145 - INFO - Handling GET request for path: /get-boards
-2024-10-18 12:20:36,145 - INFO - Sending available boards list.
-2024-10-18 12:20:38,966 - INFO - Handling POST request for path: /upload
-2024-10-18 12:20:38,975 - INFO - Sketch uploaded and upload process started.
-2024-10-18 12:20:38,982 - INFO - Handling GET request for path: /upload-stream
-2024-10-18 12:20:39,044 - INFO - Guessing port name as COM4
-2024-10-18 12:20:39,044 - INFO - Using Arduino CLI command at C:\Users\lapto\AppData\Local\Temp\_MEI109522\resources\Arduino-CLI\arduino-cli.exe
-2024-10-18 12:20:39,506 - DEBUG - 
-2024-10-18 12:20:39,508 - DEBUG - Using board 'nano' from platform in folder: C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6
-2024-10-18 12:20:39,508 - DEBUG - Using core 'arduino' from platform in folder: C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6
-2024-10-18 12:20:39,508 - DEBUG - 
-2024-10-18 12:20:39,560 - DEBUG - Detecting libraries used...
-2024-10-18 12:20:39,625 - DEBUG - C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\variants\eightanaloginputs C:\Users\lapto\AppData\Local\Temp\arduino\sketches\46DF9DCFD672AADD6681F51D896F8861\sketch\tmp980b_gvg.ino.cpp -o nul
-2024-10-18 12:20:39,625 - DEBUG - Generating function prototypes...
-2024-10-18 12:20:39,705 - DEBUG - C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\variants\eightanaloginputs C:\Users\lapto\AppData\Local\Temp\arduino\sketches\46DF9DCFD672AADD6681F51D896F8861\sketch\tmp980b_gvg.ino.cpp -o C:\Users\lapto\AppData\Local\Temp\3709192806\sketch_merged.cpp
-2024-10-18 12:20:39,705 - DEBUG - C:\Users\lapto\AppData\Local\Arduino15\packages\builtin\tools\ctags\5.8-arduino11/ctags -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives C:\Users\lapto\AppData\Local\Temp\3709192806\sketch_merged.cpp
-2024-10-18 12:20:39,763 - DEBUG - Compiling sketch...
-2024-10-18 12:20:39,763 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR "-IC:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino" "-IC:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\eightanaloginputs" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861\\sketch\\tmp980b_gvg.ino.cpp" -o "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861\\sketch\\tmp980b_gvg.ino.cpp.o"
-2024-10-18 12:20:39,824 - DEBUG - Compiling libraries...
-2024-10-18 12:20:39,824 - DEBUG - Compiling core...
-2024-10-18 12:20:39,948 - DEBUG - Using precompiled core: C:\Users\lapto\AppData\Local\Temp\arduino\cores\arduino_avr_nano_cpu_atmega328old_7d525b5b9f1c428549801cac2158a35a\core.a
-2024-10-18 12:20:39,948 - DEBUG - Linking everything together...
-2024-10-18 12:20:40,000 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p -o "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861/tmp980b_gvg.ino.elf" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861\\sketch\\tmp980b_gvg.ino.cpp.o" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861/..\\..\\cores\\arduino_avr_nano_cpu_atmega328old_7d525b5b9f1c428549801cac2158a35a\\core.a" "-LC:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861" -lm
-2024-10-18 12:20:40,317 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0 "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861/tmp980b_gvg.ino.elf" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861/tmp980b_gvg.ino.eep"
-2024-10-18 12:20:40,374 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861/tmp980b_gvg.ino.elf" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861/tmp980b_gvg.ino.hex"
-2024-10-18 12:20:40,374 - DEBUG - 
-2024-10-18 12:20:40,477 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\46DF9DCFD672AADD6681F51D896F8861/tmp980b_gvg.ino.elf"
-2024-10-18 12:20:40,529 - DEBUG - Sketch uses 444 bytes (1%) of program storage space. Maximum is 30720 bytes.
-2024-10-18 12:20:40,530 - DEBUG - Global variables use 9 bytes (0%) of dynamic memory, leaving 2039 bytes for local variables. Maximum is 2048 bytes.
-2024-10-18 12:20:40,616 - DEBUG - "C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/bin/avrdude" "-CC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/etc/avrdude.conf" -v -V -patmega328p -carduino "-PCOM4" -b57600 -D "-Uflash:w:C:\Users\lapto\AppData\Local\Temp\arduino\sketches\46DF9DCFD672AADD6681F51D896F8861/tmp980b_gvg.ino.hex:i"
-2024-10-18 12:20:40,640 - DEBUG - 
-2024-10-18 12:20:40,695 - DEBUG - avrdude: Version 6.3-20190619
-2024-10-18 12:20:40,695 - DEBUG - Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
-2024-10-18 12:20:40,695 - DEBUG - Copyright (c) 2007-2014 Joerg Wunsch
-2024-10-18 12:20:40,695 - DEBUG - 
-2024-10-18 12:20:40,695 - DEBUG - System wide configuration file is "C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/etc/avrdude.conf"
-2024-10-18 12:20:40,696 - DEBUG - 
-2024-10-18 12:20:40,696 - DEBUG - Using Port                    : COM4
-2024-10-18 12:20:40,696 - DEBUG - Using Programmer              : arduino
-2024-10-18 12:20:40,696 - DEBUG - Overriding Baud Rate          : 57600
-2024-10-18 12:20:45,827 - DEBUG - avrdude: ser_open(): can't open device "\\.\COM4": The semaphore timeout period has expired.
-2024-10-18 12:20:45,827 - DEBUG - 
-2024-10-18 12:20:45,828 - DEBUG - 
-2024-10-18 12:20:45,828 - DEBUG - 
-2024-10-18 12:20:45,828 - DEBUG - avrdude done.  Thank you.
-2024-10-18 12:20:45,828 - DEBUG - 
-2024-10-18 12:20:45,878 - DEBUG - Error during Upload: Failed uploading: uploading error: exit status 1
+2024-10-18 12:24:48,411 - INFO - Blocklyduino can now be accessed at http://127.0.0.1:8080/
+2024-10-18 12:24:49,937 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/
+2024-10-18 12:24:50,486 - INFO - Handling GET request for path: /get-boards
+2024-10-18 12:24:50,486 - INFO - Sending available boards list.
+2024-10-18 12:24:50,519 - INFO - Handling GET request for path: /favicon.ico
+2024-10-18 12:24:54,561 - INFO - Handling POST request for path: /upload
+2024-10-18 12:24:54,570 - INFO - Sketch uploaded and upload process started.
+2024-10-18 12:24:54,576 - INFO - Handling GET request for path: /upload-stream
+2024-10-18 12:24:54,619 - INFO - Guessing port name as COM4
+2024-10-18 12:24:54,621 - INFO - Using Arduino CLI command at C:\Users\lapto\AppData\Local\Temp\_MEI178802\resources\Arduino-CLI\arduino-cli.exe
+2024-10-18 12:24:55,075 - DEBUG - 
+2024-10-18 12:24:55,077 - DEBUG - Using board 'nano' from platform in folder: C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6
+2024-10-18 12:24:55,077 - DEBUG - Using core 'arduino' from platform in folder: C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6
+2024-10-18 12:24:55,077 - DEBUG - 
+2024-10-18 12:24:55,141 - DEBUG - Detecting libraries used...
+2024-10-18 12:24:55,192 - DEBUG - C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\variants\eightanaloginputs C:\Users\lapto\AppData\Local\Temp\arduino\sketches\897822ED73BA858DB6D9B97D7C7BA97B\sketch\tmpbflkhof7.ino.cpp -o nul
+2024-10-18 12:24:55,192 - DEBUG - Generating function prototypes...
+2024-10-18 12:24:55,273 - DEBUG - C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino -IC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\variants\eightanaloginputs C:\Users\lapto\AppData\Local\Temp\arduino\sketches\897822ED73BA858DB6D9B97D7C7BA97B\sketch\tmpbflkhof7.ino.cpp -o C:\Users\lapto\AppData\Local\Temp\1331801242\sketch_merged.cpp
+2024-10-18 12:24:55,273 - DEBUG - C:\Users\lapto\AppData\Local\Arduino15\packages\builtin\tools\ctags\5.8-arduino11/ctags -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives C:\Users\lapto\AppData\Local\Temp\1331801242\sketch_merged.cpp
+2024-10-18 12:24:55,273 - DEBUG - Compiling sketch...
+2024-10-18 12:24:55,327 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR "-IC:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino" "-IC:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\eightanaloginputs" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B\\sketch\\tmpbflkhof7.ino.cpp" -o "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B\\sketch\\tmpbflkhof7.ino.cpp.o"
+2024-10-18 12:24:55,390 - DEBUG - Compiling libraries...
+2024-10-18 12:24:55,390 - DEBUG - Compiling core...
+2024-10-18 12:24:55,530 - DEBUG - Using precompiled core: C:\Users\lapto\AppData\Local\Temp\arduino\cores\arduino_avr_nano_cpu_atmega328old_7d525b5b9f1c428549801cac2158a35a\core.a
+2024-10-18 12:24:55,592 - DEBUG - Linking everything together...
+2024-10-18 12:24:55,592 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p -o "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B/tmpbflkhof7.ino.elf" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B\\sketch\\tmpbflkhof7.ino.cpp.o" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B/..\\..\\cores\\arduino_avr_nano_cpu_atmega328old_7d525b5b9f1c428549801cac2158a35a\\core.a" "-LC:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B" -lm
+2024-10-18 12:24:55,771 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0 "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B/tmpbflkhof7.ino.elf" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B/tmpbflkhof7.ino.eep"
+2024-10-18 12:24:55,823 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B/tmpbflkhof7.ino.elf" "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B/tmpbflkhof7.ino.hex"
+2024-10-18 12:24:55,823 - DEBUG - 
+2024-10-18 12:24:55,925 - DEBUG - "C:\\Users\\lapto\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "C:\\Users\\lapto\\AppData\\Local\\Temp\\arduino\\sketches\\897822ED73BA858DB6D9B97D7C7BA97B/tmpbflkhof7.ino.elf"
+2024-10-18 12:24:55,989 - DEBUG - Sketch uses 444 bytes (1%) of program storage space. Maximum is 30720 bytes.
+2024-10-18 12:24:55,989 - DEBUG - Global variables use 9 bytes (0%) of dynamic memory, leaving 2039 bytes for local variables. Maximum is 2048 bytes.
+2024-10-18 12:24:56,062 - DEBUG - "C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/bin/avrdude" "-CC:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/etc/avrdude.conf" -v -V -patmega328p -carduino "-PCOM4" -b57600 -D "-Uflash:w:C:\Users\lapto\AppData\Local\Temp\arduino\sketches\897822ED73BA858DB6D9B97D7C7BA97B/tmpbflkhof7.ino.hex:i"
+2024-10-18 12:24:56,084 - DEBUG - 
+2024-10-18 12:24:56,084 - DEBUG - avrdude: Version 6.3-20190619
+2024-10-18 12:24:56,084 - DEBUG - Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
+2024-10-18 12:24:56,084 - DEBUG - Copyright (c) 2007-2014 Joerg Wunsch
+2024-10-18 12:24:56,084 - DEBUG - 
+2024-10-18 12:24:56,138 - DEBUG - System wide configuration file is "C:\Users\lapto\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17/etc/avrdude.conf"
+2024-10-18 12:24:56,139 - DEBUG - 
+2024-10-18 12:24:56,139 - DEBUG - Using Port                    : COM4
+2024-10-18 12:24:56,139 - DEBUG - Using Programmer              : arduino
+2024-10-18 12:24:56,140 - DEBUG - Overriding Baud Rate          : 57600
+2024-10-18 12:25:01,211 - DEBUG - avrdude: ser_open(): can't open device "\\.\COM4": The semaphore timeout period has expired.
+2024-10-18 12:25:01,218 - DEBUG - 
+2024-10-18 12:25:01,219 - DEBUG - 
+2024-10-18 12:25:01,219 - DEBUG - 
+2024-10-18 12:25:01,219 - DEBUG - avrdude done.  Thank you.
+2024-10-18 12:25:01,220 - DEBUG - 
+2024-10-18 12:25:01,274 - DEBUG - Error during Upload: Failed uploading: uploading error: exit status 1

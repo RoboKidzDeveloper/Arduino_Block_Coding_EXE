@@ -25,19 +25,13 @@ board_fqbn = ""  # FQBN (Fully Qualified Board Name) for the selected board
 def get_arduino_command():
     """Return the path to the Arduino CLI binary using a relative path."""
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    arduino_cli_path = os.path.join(script_dir, "resources", "Arduino-CLI", "arduino-cli.exe")
-
-    # Add print to display the path
-    print("Arduino CLI Path:", arduino_cli_path)
-    
+    arduino_cli_path = os.path.join(script_dir, "resources", "Arduino CLI", "arduino-cli.exe")
     if os.path.exists(arduino_cli_path):
         logging.info("Using Arduino CLI command at %s", arduino_cli_path)
         return arduino_cli_path
     else:
         logging.error("Arduino CLI command not found at specified path: %s", arduino_cli_path)
         return None
-
-
 
 def guess_port_name():
     """Attempt to guess a port name that we might find an Arduino on."""
@@ -109,6 +103,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         else:
             super().do_POST()
 
+
     def get_boards(self):
         """Sends a JSON response with a list of available boards and their FQBN values."""
         boards = [
@@ -178,9 +173,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         """Handles the code upload request and starts the upload process."""
         global sketch_filename, upload_in_progress, board_fqbn
 
+        logging.info("Upload request received.")
         content_length = int(self.headers.get('Content-Length', 0))
         if content_length:
             post_data = json.loads(self.rfile.read(content_length))
+            logging.info(f"Post data: {post_data}")
             arduino_code = post_data.get("code")
             fqbn = post_data.get("fqbn")
 
@@ -197,7 +194,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             upload_in_progress = True
             board_fqbn = fqbn
 
-            logging.info("Sketch uploaded and upload process started.")
+            logging.info("Sketch uploaded and upload process started.")  
             self.send_response(200)
             self.end_headers()
             self.wfile.write(b"Sketch uploaded. Starting upload process...\n")
@@ -207,6 +204,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
         self.send_header('Access-Control-Allow-Origin', '*')  # Allows cross-origin requests
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
         self.end_headers()
         self.wfile.write(json.dumps(data).encode())
 
@@ -218,9 +217,10 @@ if __name__ == '__main__':
     
     # Start the server
     server = http.server.HTTPServer(("127.0.0.1", 8080), Handler)
+
     
     # Delay and open the URL in the default web browser
     time.sleep(1)
-    webbrowser.open("http://127.0.0.1:8080/blockly/apps/blocklyduino/")
+    # webbrowser.open("http://127.0.0.1:8080/blockly/apps/blocklyduino/")
     
     server.serve_forever()  
