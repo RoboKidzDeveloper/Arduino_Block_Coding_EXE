@@ -50,7 +50,6 @@ function selectBoard() {
 function uploadClick() {
     const arduinoCode = Blockly.Arduino.workspaceToCode(workspace);
 
-    // Check if a board is selected before attempting to upload
     if (!boardFqbn) {
         writeToTerminal("Error: No board selected. Please select a board before uploading.");
         return;
@@ -61,20 +60,18 @@ function uploadClick() {
         return;
     }
 
+    writeToTerminal("Arduino code: " + arduinoCode);
+    writeToTerminal("Selected board FQBN: " + boardFqbn);
+
     try {
-        // Send upload request to the main process via IPC
-        ipcRenderer.send('start-upload', {
+        // Use the exposed API from preload.js to send the upload request
+        window.electronAPI.sendUpload({
             sketchname: arduinoCode,
             fqbn: boardFqbn
         });
 
-        // Listen for upload progress and output it to the terminal
-        ipcRenderer.on('upload-progress', (event, message) => {
-            if (message.includes("Error")) {
-                writeToTerminal(`Error during upload: ${message}`);
-            } else {
-                writeToTerminal(message);
-            }
+        window.electronAPI.onUploadProgress((event, message) => {
+            writeToTerminal(`Upload Progress: ${message}`);
         });
 
         writeToTerminal("Compiling code and starting the upload process...");
@@ -82,8 +79,6 @@ function uploadClick() {
         writeToTerminal(`Error: Failed to initiate upload - ${error.message}`);
     }
 }
-
-
 
 
 function startUploadStream() {

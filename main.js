@@ -7,18 +7,14 @@ function createWindow() {
         width: 1280,
         height: 720,
         webPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false,
-            enableRemoteModule: true,  // This enables remote module access for certain Electron versions
-            webSecurity: false,  // Disable for local development, secure for production later
+            preload: path.join(__dirname, 'preload.js'),  // Add the preload.js path here
+            contextIsolation: true,  // Keep contextIsolation enabled for security
+            enableRemoteModule: false,  // Disable remote module if not required
+            nodeIntegration: false  // Ensure nodeIntegration is false
         }
     });
 
-    // Load the local server into the Electron window
-    win.loadURL('http://localhost:8080/blockly/apps/blocklyduino/index.html');
-
-    // Uncomment for debugging
-    // win.webContents.openDevTools();
+    win.loadURL('http://127.0.0.1:8080/blockly/apps/blocklyduino/index.html');
 }
 
 // Start the Python server when Electron starts
@@ -38,9 +34,41 @@ function startPythonServer() {
     });
 }
 
+ipcMain.on('start-upload', (event, data) => {
+    const { sketchname, fqbn } = data;
+
+    // Log the received data for debugging
+    console.log("Sketchname:", sketchname);
+    console.log("FQBN:", fqbn);
+
+    // Correct JSON format and escape quotes and newlines
+    const postData = JSON.stringify({ "code": sketchname, "fqbn": fqbn });
+    const escapedPostData = postData.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+
+    // Use escapedPostData in the curl command to avoid special character issues
+    const curlCommand = `curl -X POST -H "Content-Type: application/json" -d "${escapedPostData}" http://127.0.0.1:8080/upload`;
+
+    console.log("Running curl command:", curlCommand);  // Debugging output
+
+    exec(curlCommand, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error uploading sketch: ${error.message}`);
+            event.reply('upload-progress', `Error: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.error(`Upload stderr: ${stderr}`);
+        }
+        console.log(`Upload stdout: ${stdout}`);  // Print stdout to track progress
+        event.reply('upload-progress', stdout);
+    });
+});
+
+
+
 app.whenReady().then(() => {
-    startPythonServer();  // Start the Python server
-    setTimeout(createWindow, 5000);  // Wait 5 seconds to ensure the server starts before opening the window
+    startPythonServer();
+    setTimeout(createWindow, 5000);  // Delay window creation to allow the server to start
 });
 
 app.on('window-all-closed', () => {
