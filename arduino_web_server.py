@@ -221,6 +221,6 @@ if __name__ == '__main__':
     
     # Delay and open the URL in the default web browser
     time.sleep(1)
-    webbrowser.open("http://127.0.0.1:8080/blockly/apps/blocklyduino/")
+    # webbrowser.open("http://127.0.0.1:8080/blockly/apps/blocklyduino/")
     
     server.serve_forever()  
