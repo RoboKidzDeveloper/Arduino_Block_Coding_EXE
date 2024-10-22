@@ -1,3 +1,7 @@
-2024-10-21 17:04:15,877 - INFO - Arduino Web Server can now be accessed at http://127.0.0.1:8080/
-2024-10-21 17:04:24,215 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/index.html
-202
+2024-10-22 10:25:21,034 - INFO - Arduino Web Server can now be accessed at http://127.0.0.1:8080/
+2024-10-22 10:25:26,679 - INFO - Handling GET request for path: /get-boards
+2024-10-22 10:25:26,679 - INFO - Sending available boards list.
+2024-10-22 10:25:40,751 - INFO - Handling POST request for path: /upload
+2024-10-22 10:25:40,751 - INFO - Upload request received.
+2024-10-22 10:25:40,847 - INFO - Guessing port name as COM7
+2024-10-22 10:25:40,847 - INFO - Using Arduino CLI command at P:\Block_Coding\Arduino_Block_Coding_EXE\resources\Arduino-cli\arduino-cli.exe
