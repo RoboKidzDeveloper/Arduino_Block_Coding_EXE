@@ -90,6 +90,7 @@ def upload_sketch(sketchname, port, fqbn):
     else:
         print("Error: Arduino CLI command not found")  # Debugging output
 
+
 class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         """Handles GET requests."""
@@ -122,10 +123,17 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
         if content_length:
             try:
+                # Read the raw post data
                 post_data = self.rfile.read(content_length).decode('utf-8')
+                
+                # Print the raw data received to debug it
+                print(f"Raw POST Data: {post_data}")
+
+                # Parse the JSON data
                 post_data_json = json.loads(post_data)
                 print(f"Parsed JSON data: {post_data_json}")  # Debugging parsed data
 
+                # Extract Arduino code and FQBN from the JSON data
                 arduino_code = post_data_json.get("code")
                 fqbn = post_data_json.get("fqbn")
 
@@ -171,6 +179,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 print(f"Error: Failed to decode JSON: {json_error}")  # Debugging print statement
                 self.send_error(400, "Invalid JSON format.")
                 return
+
 
     def get_boards(self):
         """Sends a JSON response with a list of available boards and their FQBN values."""

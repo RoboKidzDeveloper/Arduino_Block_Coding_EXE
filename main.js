@@ -41,12 +41,21 @@ ipcMain.on('start-upload', (event, data) => {
     console.log("Sketchname:", sketchname);
     console.log("FQBN:", fqbn);
 
-    // Correct JSON format and escape quotes and newlines
-    const postData = JSON.stringify({ "code": sketchname, "fqbn": fqbn });
-    const escapedPostData = postData.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+    // Use JSON.stringify to properly format the data
+    const postData = JSON.stringify({
+        code: sketchname,
+        fqbn: fqbn
+    });
 
-    // Use escapedPostData in the curl command to avoid special character issues
-    const curlCommand = `curl -X POST -H "Content-Type: application/json" -d "${escapedPostData}" http://127.0.0.1:8080/upload`;
+    // Write JSON data to a temporary file to avoid shell interpretation issues
+    const fs = require('fs');
+    const path = require('path');
+    const tempFilePath = path.join(__dirname, 'temp_upload_data.json');
+
+    fs.writeFileSync(tempFilePath, postData);
+
+    // Use the temp file with curl
+    const curlCommand = `curl -X POST -H "Content-Type: application/json" --data @${tempFilePath} http://127.0.0.1:8080/upload`;
 
     console.log("Running curl command:", curlCommand);  // Debugging output
 
@@ -61,8 +70,13 @@ ipcMain.on('start-upload', (event, data) => {
         }
         console.log(`Upload stdout: ${stdout}`);  // Print stdout to track progress
         event.reply('upload-progress', stdout);
+
+        // Remove the temp file after upload
+        fs.unlinkSync(tempFilePath);
     });
 });
+
+
 
 
 

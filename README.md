@@ -24,9 +24,9 @@ C:\Users\lapto\Downloads\arduino-resources\arduino-cli\arduino-cli.exe lib list
 260 (Purple)
 290 (Magenta)
 330 (Pink)
-
-to check boards
 arduino-cli board listall
+to check boards
+
 ### Features
 
 * Programming Arduino with visually drag and drop code blocks
