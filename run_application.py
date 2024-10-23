@@ -10,6 +10,26 @@ def show_message(message):
     messagebox.showinfo("Information", message)
     root.destroy()
 
+def find_npm_path():
+    # Try common npm installation paths
+    possible_paths = [
+        r'C:\Program Files\nodejs\npm.cmd',  # Standard install location on Windows
+        r'C:\Users\{username}\AppData\Roaming\npm\npm.cmd',  # User-specific install location
+        '/usr/local/bin/npm',  # Standard location on macOS/Linux
+        '/usr/bin/npm'  # Another possible location on Linux
+    ]
+    
+    # Replace {username} with the actual username on Windows
+    if sys.platform == "win32":
+        username = os.getlogin()
+        possible_paths[1] = possible_paths[1].replace("{username}", username)
+
+    for path in possible_paths:
+        if os.path.isfile(path):
+            return path
+    
+    return None
+
 def main():
     # Get the base path depending on whether we're running in a frozen state (i.e., exe)
     if hasattr(sys, '_MEIPASS'):
@@ -33,7 +53,11 @@ def main():
 
     if 'esp32:esp32' not in result.stdout:
         print("ESP32 core not found. Installing...")
-        subprocess.run([arduino_cli_path, 'core', 'install', 'esp32:esp32'])
+        install_result = subprocess.run([arduino_cli_path, 'core', 'install', 'esp32:esp32'], capture_output=True, text=True)
+        if install_result.returncode != 0:
+            print("Failed to install ESP32 core:", install_result.stderr)
+            show_message("Error installing ESP32 core.")
+            return
     else:
         print("ESP32 core already installed.")
 
@@ -42,8 +66,12 @@ def main():
     print("Navigating to project directory...")
     os.chdir(project_dir)
 
-    # Use the full path to npm
-    npm_path = r'C:\Program Files\nodejs\npm.cmd'  # Update to your npm path if necessary
+    # Find npm path
+    npm_path = find_npm_path()
+    if not npm_path:
+        show_message("Error: npm executable not found!")
+        return
+
     print("Starting the application...")
     subprocess.run([npm_path, 'start'])
 
