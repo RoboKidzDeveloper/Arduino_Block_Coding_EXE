@@ -2,10 +2,9 @@
   "name": "arduino_block_coding_exe",
   "version": "1.0.0",
   "description": "Standalone desktop application for Blockly and Arduino web server.",
-  "main": "main.js",
+  "main": "main.js",  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
+    "start": "electron .",  
     "install": "npm install"
   },
   "keywords": [
@@ -14,7 +13,7 @@
     "Electron",
     "Desktop"
   ],
-  "author": "Hrushikesh Boddu ( bodduhrushikesh@gmail.com ) ",
+  "author": "Hrushikesh Boddu (bodduhrushikesh@gmail.com)",
   "devDependencies": {
     "electron": "^33.0.1",
     "electron-packager": "^17.1.2"
@@ -23,7 +22,6 @@
     "axios": "^1.7.7",
     "child_process": "^1.0.2",
     "eventsource": "^2.0.2",
-    "eventsource-polyfill": "^0.9.6",
     "express": "^4.21.1",
     "http-proxy": "^1.18.1"
   }

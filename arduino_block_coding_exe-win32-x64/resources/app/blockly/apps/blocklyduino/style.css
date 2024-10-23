@@ -1,0 +1,357 @@
+/* General styles */
+body {
+    background-color: #f0f4f8; /* Soft light blue */
+    font-family: 'Poppins', sans-serif; /* Modern and friendly font */
+    margin: 0;
+    overflow: hidden;
+    color: #333; /* Dark grey text for readability */
+    display: flex;
+    height: 100vh;
+    box-sizing: border-box;
+    background-image: url('https://www.transparenttextures.com/patterns/grey-floral.png'); /* Fun texture */
+}
+
+/* Sidebar styles */
+#sidebar {
+    background-color: #ffdeeb; /* Light pink */
+    color: #000; /* Black text for contrast */
+    width: 280px;
+    padding: 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    border-right: 3px solid #ffa3d7; /* Slightly darker pink border */
+}
+
+#sidebar h1 {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    color: #ff69b4; /* Bright pink for header */
+    text-align: center;
+    font-family: 'Fredoka One', cursive; /* Bold and playful font for headers */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+#nav {
+    width: 100%;
+    max-width: 280px;
+}
+
+#nav button {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 14px;
+    font-size: 1.2em;
+    border-radius: 12px;
+    border: 2px solid #ff9ebf; /* Soft pink button border */
+    background-color: #ffc2e1; /* Light pink background */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-family: 'Poppins', sans-serif; /* Simple, friendly button font */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#nav button:hover {
+    background-color: #ff8da1; /* Soft coral on hover */
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(255, 141, 161, 0.3);
+}
+
+#nav button:focus {
+    outline: none;
+    box-shadow: 0 0 6px 2px rgba(255, 141, 161, 0.6); /* Soft pink glow */
+}
+
+/* Main content styles */
+#main-content {
+    margin-left: 280px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffdf7; /* Soft off-white */
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Soft inner shadow */
+    border-radius: 10px;
+}
+
+/* Tab row styles */
+#tabRow {
+    display: flex;
+    background-color: #b3e5fc; /* Light blue */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-bottom: 3px solid #81d4fa; /* Fun blue border */
+}
+
+#tabRow > div {
+    flex-grow: 1;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    color: #333; /* Dark grey for text */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Fredoka One', cursive; /* Playful font */
+    background: rgba(255, 255, 255, 0.2); /* Slight overlay */
+    border-right: 2px solid #81d4fa; /* Slight division between tabs */
+}
+
+.tabon {
+    background-color: #80deea; /* Soft cyan for active tab */
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    box-shadow: inset 0 -3px 0px #00acc1; /* Cyan shadow effect */
+}
+
+.taboff {
+    background-color: #b3e5fc;
+}
+
+.taboff:hover {
+    background-color: #80deea;
+    color: #fff;
+}
+
+/* Content area styles */
+#content_area {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#content_blocks,
+#content_arduino {
+    width: 100%;
+    height: 100%;
+    display: none;
+    border: none;
+}
+
+#content_blocks {
+    display: block;
+}
+
+#content_arduino {
+    resize: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    background-color: #e0f7fa; /* Soft teal for code area */
+    color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #80cbc4;
+}
+
+/* Enhanced Terminal Styles */
+.terminal {
+    width: 100%;
+    height: 150px;
+    background-color: #444; /* Dark background */
+    color: #00ff00; /* Bright green text for terminal */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+    margin-top: 15px;
+    overflow-y: auto;
+    border: 1px solid #4caf50; /* Green border */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Soft effect */
+}
+
+/* Scrollbar for the terminal */
+.terminal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal::-webkit-scrollbar-track {
+    background: #666; /* Darker track */
+}
+
+.terminal::-webkit-scrollbar-thumb {
+    background-color: #4caf50; /* Green scrollbar */
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+/* Responsive design for small screens */
+@media only screen and (max-width: 600px) {
+    #sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    #main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    #nav button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+/* Wrapper for the custom button and dropdown */
+.custom-button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+/* Style for the dropdown select */
+.custom-select {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2em;
+    border-radius: 12px;
+    background-color: #ffe082; /* Light yellow */
+    color: #333;
+    border: 2px solid #ffca28; /* Yellow border */
+    appearance: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-select:hover {
+    background-color: #ffca28; /* Yellow on hover */
+    transform: scale(1.03);
+}
+
+.custom-select:focus {
+    outline: none;
+    box-shadow: 0 0 6px 2px rgba(255, 202, 40, 0.5);
+}
+
+
+/* Enhanced Terminal Styles */
+.terminal {
+    width: 100%;
+    height: 150px;
+    background-color: #e3f2fd; /* Soft light blue */
+    color: #1e88e5; /* Calm blue text for terminal */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+    margin-top: 15px;
+    overflow-y: auto;
+    border: 1px solid #42a5f5; /* Bright blue border */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Soft inner shadow */
+}
+
+/* Scrollbar for the terminal */
+.terminal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal::-webkit-scrollbar-track {
+    background: #bbdefb; /* Light blue for the track */
+}
+
+.terminal::-webkit-scrollbar-thumb {
+    background-color: #42a5f5; /* Bright blue for scrollbar */
+    border-radius: 10px;
+    border: 2px solid #e3f2fd; /* Matches background for softer look */
+}
+
+/* Styles for the toggle buttons */
+.toggle-button-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-size: 0.8em;
+    border-radius: 8px;
+    border: 2px solid #6b6b6b;
+    background-color: #f3b2b2; /* Light red for terminal button */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#terminalButton {
+    background-color: #f3b2b2; /* Light red */
+}
+
+#serialMonitorButton {
+    background-color: #b2d6f3; /* Light blue for serial monitor button */
+}
+
+.toggle-button:hover {
+    transform: scale(1.1);
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+/* Enhanced Terminal Styles */
+.terminal {
+    width: 100%;
+    height: 150px;
+    background-color: #282c34; /* Dark background for terminal */
+    color: #61dafb; /* Light blue text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+    margin-top: 10px;
+    overflow-y: auto;
+    border: 1px solid #61dafb;
+    display: block;
+}
+
+/* Enhanced Serial Monitor Styles */
+.serial-monitor {
+    width: 100%;
+    height: 150px;
+    background-color: white; /* Slightly lighter dark background for serial monitor */
+    color: #ff9800; /* Orange text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+    margin-top: 10px;
+    overflow-y: auto;
+    border: 1px solid #ff9800;
+}
+
+/* Serial port button styles */
+#connectSerialButton {
+    background-color: #d1c4e9; /* Light purple */
+    border: 2px solid #7e57c2; /* Purple border */
+}
