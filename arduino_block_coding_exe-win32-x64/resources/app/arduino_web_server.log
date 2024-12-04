@@ -1,4 +1,0 @@
-2024-10-23 13:02:07,052 - INFO - Arduino Web Server can now be accessed at http://127.0.0.1:8080/
-2024-10-23 13:02:12,835 - INFO - Handling GET request for path: /get-boards
-2024-10-23 13:02:12,835 - INFO - Sending available boards list.
-2024-10-23 13:02:12,140 - INFO - Handling GET request for path: /blockly/apps/blocklyduino/uploadcode.js
